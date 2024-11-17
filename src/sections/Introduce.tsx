@@ -1,10 +1,10 @@
-import { Button, Typography } from "antd";
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
 import PropertyComponent from "@/components/PropertyComponent";
-import { IoHome, IoLocationOutline } from "react-icons/io5";
+import { Button, Typography } from "antd";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import { CgInsights } from "react-icons/cg";
-import { FaShieldHeart, FaXTwitter } from "react-icons/fa6";
+import { FaShieldHeart } from "react-icons/fa6";
+import { IoHome, IoLocationOutline } from "react-icons/io5";
 
 const { Title, Paragraph, Text } = Typography;
 const Introduce = () => {
@@ -13,14 +13,6 @@ const Introduce = () => {
     // once: true, // chi thuc hien 1 lan
     amount: 0.2,
   });
-
-  const containerVariants = {
-    visible: {
-      transition: {
-        satggerChildren: 0.3, // thời gian trì hoãn mỗi phần tử con là 0.3s
-      },
-    },
-  };
 
   const childVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -167,7 +159,7 @@ const Introduce = () => {
             }}
             key={isInView ? `in-view-${5}` : `out-view-${5}`}
             initial={{ opacity: 0, scale: 0 }} // Bắt đầu từ xa với kích thước nhỏ
-            animate={{ opacity: 1, scale: 1 }}  // Tới vị trí ban đầu với kích thước thật
+            animate={{ opacity: 1, scale: 1 }} // Tới vị trí ban đầu với kích thước thật
             transition={{
               type: "spring", // Dùng loại chuyển động "spring" để tạo cảm giác ném
               stiffness: 60, // Độ cứng của lò xo

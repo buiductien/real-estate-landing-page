@@ -29,7 +29,7 @@ const Contact = () => {
         }}
       >
         <Text style={{ fontSize: "50px", fontWeight: "300" }}>
-          Let's Plan you new house!
+          {"Let's Plan you new house!"}
           <Text style={{ fontSize: "50px", fontWeight: "500" }}>
             {" Contact us"}
           </Text>
